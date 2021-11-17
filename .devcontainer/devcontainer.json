@@ -35,7 +35,8 @@
 		"codezombiech.gitignore",
 		"yzhang.markdown-all-in-one",
 		"editorconfig.editorconfig",
-		"leetcode.vscode-leetcode"
+		"leetcode.vscode-leetcode",
+		"formulahendry.dotnet-test-explorer"
 	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [5000, 5001],
