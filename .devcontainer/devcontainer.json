@@ -1,0 +1,51 @@
+{
+	"name": "F#",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": {
+			// Update 'VARIANT' to pick a .NET Core version: 3.1, 5.0, 6.0
+			// Append -bullseye or -focal to pin to an OS version.
+			"VARIANT": "6.0",
+			// Options
+			"NODE_VERSION": "16"
+		}
+	},
+
+    "settings": {
+        "dotfiles.installCommand": "",
+      "terminal.integrated.defaultProfile.linux": "bash",
+      // "terminal.integrated.shell.linux": "zsh"
+      // "terminal.integrated.shell.linux": "sh"
+      "leetcode.showDescription": "In File Comment",
+      "leetcode.workspaceFolder": "/workspaces/leetcode-playground-fsharp",
+      "leetcode.filePath": {
+        "default": {
+          // relative folder path
+          "folder": "src",
+          "filename": "${id}.${kebab-case-name}.${ext}"
+        }
+      },
+		  "leetcode.defaultLanguage": "csharp",
+    },
+    // Add the IDs of extensions you want installed when the container is created.
+    "extensions": [
+		"ionide.ionide-fsharp",
+		"eamodio.gitlens",
+		"mhutchie.git-graph",
+		"codezombiech.gitignore",
+		"yzhang.markdown-all-in-one",
+		"editorconfig.editorconfig",
+		"leetcode.vscode-leetcode"
+	],
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [5000, 5001],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "dotnet restore",
+
+	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "root",
+	"features": {
+		"git": "os-provided"
+	}
+}
